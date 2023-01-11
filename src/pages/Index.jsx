@@ -12,7 +12,9 @@ export default function Index() {
 
   return (
     <div className='home-page'>
-      <div className="container">
+
+    <section className="start">
+    <div className="container">
         <div className="row">
           <div className="input-group">
             <input type="number" value={firstInputValue} onChange={(e) => dispatch(setFirstInput(e.target.value))} />
@@ -27,6 +29,13 @@ export default function Index() {
           <p className="result"> Result is {result}  </p>
         </div>
       </div>
+    </section>
+
+    <footer>
+      <p className="copyright"> Created by <a href='https:/github.com/nihat-js'> nihat-js  </a> </p>
+    </footer>
+
+      
     </div>
   )
 }
