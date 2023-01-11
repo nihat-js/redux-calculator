@@ -1,14 +1,14 @@
 export const setFirstInput = (value) => {
   return {
     type : 'setFirstInput',
-    value :  value
+    value :  Number(value)
   }
 }
 
 export const setSecondInput = (value) => {
   return {
     type : 'setSecondInput',
-    value : value
+    value : Number(value)
   }
 }
 export const setOperator = (operator) => {
