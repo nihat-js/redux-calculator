@@ -32,7 +32,7 @@ export default function Index() {
     </section>
 
     <footer>
-      <p className="copyright"> Created by <a href='https:/github.com/nihat-js'> nihat-js  </a> </p>
+      <p className="copyright"> Created by <a href='https://github.com/nihat-js'> nihat-js  </a> </p>
     </footer>
 
       
