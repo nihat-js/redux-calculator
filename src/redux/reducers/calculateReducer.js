@@ -1,7 +1,7 @@
 const initialStates = {
 	firstInputValue: 5,
 	secondInputValue: 12,
-	result: 60,
+	result: 60, 
 	operator: '*'
 
 }
