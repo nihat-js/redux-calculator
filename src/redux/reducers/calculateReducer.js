@@ -17,7 +17,7 @@ export const calculateReducer = (state = initialStates, action) => {
 			result = calculateResult(state.firstInputValue, state.secondInputValue, state.operator)
 			return { ...state, secondInputValue: action.value, result: result }
 			break;
-		case "changeOperator":
+		case "setOperator":
 			result = calculateResult(state.firstInputValue, state.secondInputValue, action.value)
 			return { ...state ,operator : state.operator , result : result    }
 		default:

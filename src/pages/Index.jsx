@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import './Index.scss'
+import { setFirstInput, setSecondInput,  setOperator } from '../redux/actions/calculateActions'
 
 export default function Index() {
 
@@ -14,14 +15,14 @@ export default function Index() {
       <div className="container">
         <div className="row">
           <div className="input-group">
-            <input type="number" value={firstInputValue} onChange={(e) => dispatch({ value: e.target.value, type: 'setFirstInput' })} />
-            <input type="number" value={secondInputValue} onChange={(e) => dispatch({ value: e.target.value, type: 'setSecondInput' })} />
+            <input type="number" value={firstInputValue} onChange={(e) => dispatch(setFirstInput(e.target.value))} />
+            <input type="number" value={secondInputValue} onChange={(e) => dispatch(setSecondInput(e.target.value))} />
           </div>
           <div className="actions">
-            <button onClick={() => dispatch({ type: 'changeOperator', value: '+' })} >  Sum   </button>
-            <button onClick={() => dispatch({ type: 'changeOperator', value: '-' })} > Minus   </button>
-            <button onClick={() => dispatch({ type: 'changeOperator', value: '*' })}  > Multiply </button>
-            <button onClick={() => dispatch({ type: 'changeOperator', value: '/' })} > Divide   </button>
+            <button onClick={() => dispatch(setOperator('+'))} >  Sum   </button>
+            <button onClick={() => dispatch(setOperator('-'))}  > Minus   </button>
+            <button onClick={() => dispatch(setOperator('*'))}  > Multiply </button>
+            <button onClick={() => dispatch(setOperator('/'))} > Divide   </button>
           </div>
           <p className="result"> Result is {result}  </p>
         </div>
@@ -29,3 +30,12 @@ export default function Index() {
     </div>
   )
 }
+
+
+// Bu buttonlar da isleyir. Xususi olaraq   calculateActions.js-de funksiyalar   yaratmadan bele etmek olar !!
+
+
+{/* <button onClick={() => dispatch({ type: 'setOperator', value: '+' })} >  Sum   2 </button> */}
+// <button onClick={() => dispatch({ type: 'setOperator', value: '-' })} > Minus   </button>
+// <button onClick={() => dispatch({ type: 'setOperator', value: '*' })}  > Multiply </button>
+// <button onClick={() => dispatch({ type: 'setOperator', value: '/' })} > Divide   </button>
