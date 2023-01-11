@@ -1,14 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import {  RootReducer } from './redux/index'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import  IndexPage  from './pages/Index'
+const store = createStore(RootReducer)
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
-    <div className="App">
-      
-    </div>
+    <Provider store={store} >
+      <div className="App">
+        <IndexPage/>
+      </div>
+    </Provider>
   )
 }
 
